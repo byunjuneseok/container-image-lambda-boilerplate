@@ -32,17 +32,33 @@ Build docker image lambda function wtih API Gateway. Just define a function and 
 # 🎮 How to deploy 
 ```bash
 # Login ECR.
+# https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ecr/get-login-password.html
 ./scripts/00-login-ecr.sh
 
-# Build image and push to Amazon ECR.
+# Create ECR repository.
+# https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ecr/create-repository.html
 ./scripts/01-create-ecr-repository.sh
+
+# Build image and push to Amazon ECR.
 ./scripts/02-ecr-tag-and-push.sh
 
 # Create and deploy lambda function.
+# https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/create-role.html
+# https://awscli.amazonaws.com/v2/documentation/api/latest/reference/iam/put-role-policy.html
 ./scripts/03-create-iam-for-lambda.sh
+
+# https://awscli.amazonaws.com/v2/documentation/api/latest/reference/lambda/create-function.html
 ./scripts/04-deploy-to-lambda.sh
 
 # Provision API Gateway.
+# https://awscli.amazonaws.com/v2/documentation/api/latest/reference/apigateway/create-rest-api.html
+# https://awscli.amazonaws.com/v2/documentation/api/latest/reference/apigateway/get-resources.html
+# https://awscli.amazonaws.com/v2/documentation/api/latest/reference/apigateway/create-resource.html
+# https://awscli.amazonaws.com/v2/documentation/api/latest/reference/apigateway/put-method.html
+# https://awscli.amazonaws.com/v2/documentation/api/latest/reference/apigateway/put-method-response.html
+# https://awscli.amazonaws.com/v2/documentation/api/latest/reference/apigateway/put-integration.html
+# https://awscli.amazonaws.com/v2/documentation/api/latest/reference/apigateway/put-integration-response.html
+# https://awscli.amazonaws.com/v2/documentation/api/latest/reference/apigateway/create-deployment.html
 ./scripts/05-create-api-gateway.py
 ```
 
@@ -58,4 +74,4 @@ Build docker image lambda function wtih API Gateway. Just define a function and 
 
 # Reference
 - https://docs.aws.amazon.com/lambda/latest/dg/python-image.html
-- https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ecr/get-login-password.html
+- https://awscli.amazonaws.com/v2/documentation/api/latest/index.html
