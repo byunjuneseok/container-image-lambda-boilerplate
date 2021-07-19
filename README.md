@@ -6,7 +6,11 @@ Build docker image lambda function wtih API Gateway. Just define a function and 
 
 
 # 👋 Prerequisite
-- Install `awscli`: [Official Document for installation](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)
+- Install `awscli`: [Official Document for installation](https://docs.aws.ßamazon.com/cli/latest/userguide/cli-chap-install.html)
+    ```bash
+    # After installing awscli.
+    aws configure
+    ```
 
 - Install `direnv`
     ```bash
