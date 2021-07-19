@@ -1,9 +1,11 @@
 # Deploy Python Lambda functions with container images.
 
+<p align="center">
+
 ![Small architecture](./readme-banner.png)
 
 Build docker image lambda function wtih API Gateway. Just define a function and build your image you want.
-
+</p>
 
 # 👋 Prerequisite
 - Install `awscli`: [Official Document for installation](https://docs.aws.ßamazon.com/cli/latest/userguide/cli-chap-install.html)
